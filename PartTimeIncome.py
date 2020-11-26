@@ -1,6 +1,6 @@
 def main():
     """
-    Gets necessary data from user and calculates his net wage.
+    Gets necessary data from a user and calculates his net wage.
     At the end it prints a result.
     """
     student = isStudent()
@@ -32,12 +32,12 @@ def main():
     if tax > 0:
         total -= tax
 
-    print(f'Your total income for this month is: {round(total)}.')
+    print(f'Your total income for this month is: {round(total)} CZK.')
 
 
 def isStudent():
     """
-    Asks user if he study and checks correct format.
+    Asks the user if he study and checks a correct format.
     """
     while True:
         try:
@@ -55,7 +55,7 @@ def isStudent():
 
 def contractType():
     """
-    Asks user for his contract type and checks correct format.
+    Asks the user for his contract type and checks a correct format.
     """
     cType = None
     while True:
@@ -75,7 +75,7 @@ def contractType():
 
 def taxCredit():
     """
-    Asks user if he signed tax credit and checks correct format.
+    Asks the user if he signed a tax credit and checks a correct format.
     """
     while True:
         try:
@@ -93,7 +93,7 @@ def taxCredit():
 
 def hoursPerShift():
     """
-    Asks user how long are his shifts and pauses and checks correct format.
+    Asks the user how long are his shifts and pauses and checks a correct format.
     """
     hours = None
     while True:
@@ -121,7 +121,7 @@ def hoursPerShift():
 
 def workingDays():
     """
-    Asks user how many days he plan to work and checks correct format.
+    Asks the user how many days he plans to work and checks a correct format.
     """
      num = None
      while True:
@@ -134,19 +134,19 @@ def workingDays():
                 break
 
         except ValueError:
-            print('Please enter correct number of days.')
+            print('Please enter a correct number of days.')
             continue
 
      return num
 
 def hourWage():
     """
-    Asks user what's his hour wage and checks correct format.
+    Asks user what's his hour wage and checks a correct format.
     """
     wage = None
     while True:
         try:
-            wage = int(input('What\'s you hour wage? '))
+            wage = int(input('What\'s your hour wage? '))
             if wage < 1:
                 raise ValueError
             else:
