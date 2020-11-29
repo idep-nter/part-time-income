@@ -55,7 +55,7 @@ def isStudent():
 
 def contractType():
     """
-    Asks the user for his contract type and checks a correct format.
+    Asks the user for his contract type and checks the correct format.
     """
     cType = None
     while True:
@@ -75,7 +75,7 @@ def contractType():
 
 def taxCredit():
     """
-    Asks the user if he signed a tax credit and checks a correct format.
+    Asks the user if he signed a tax credit and checks the correct format.
     """
     while True:
         try:
@@ -93,7 +93,7 @@ def taxCredit():
 
 def hoursPerShift():
     """
-    Asks the user how long are his shifts and pauses and checks a correct format.
+    Asks the user how long are his shifts and pauses and checks the correct format.
     """
     hours = None
     while True:
@@ -121,13 +121,13 @@ def hoursPerShift():
 
 def workingDays():
     """
-    Asks the user how many days he plans to work and checks a correct format.
+    Asks the user how many days he plans to work and checks the correct format.
     """
      num = None
      while True:
         try:
-            num = int(input('How many days a month have you worked or plan '
-                            'to work? '))
+            num = int(input('How many days a month have you worked or do you 
+                            'plan to work?'))
             if num < 1 or num > 31:
                 raise ValueError
             else:
@@ -141,7 +141,7 @@ def workingDays():
 
 def hourWage():
     """
-    Asks user what's his hour wage and checks a correct format.
+    Asks user what's his hour wage and checks the correct format.
     """
     wage = None
     while True:
