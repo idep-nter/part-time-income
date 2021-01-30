@@ -142,6 +142,5 @@ def hourWage():
 
     return wage
 
-
 if __name__ == '__main__':
     main()
