@@ -11,27 +11,20 @@ def main():
     wage = hourWage()
     total = shift * days * wage
     tax = 0
-
     if contract == 'dpp' and total > 10_000:
         total = (total / 100) * 89
         tax = (total / 100) * 15
-
     elif contract == 'dpc' and total < 3_000:
         tax = (total / 100) * 15
-
     elif contract == 'dpc' and total > 3_000:
         total = (total / 100) * 89
         tax = (total / 100) * 15
-
     if tax and discount:
         tax -= 2070
-
     if tax and student:
         tax -= 370
-
     if tax > 0:
         total -= tax
-
     print(f'Your total income for this month is: {round(total)} CZK.')
 
 
@@ -48,7 +41,6 @@ def isStudent():
                 return False
             else:
                 raise ValueError
-
         except ValueError:
             print('Please enter "y" or "n".')
             continue
@@ -66,7 +58,6 @@ def contractType():
                 break
             else:
                 raise ValueError
-
         except ValueError:
             print('Please enter "DPP" or "DPC".')
             continue
@@ -86,11 +77,10 @@ def taxCredit():
                 return False
             else:
                 raise ValueError
-
         except ValueError:
             print('Please enter "y" or "n".')
             continue
-
+          
 def hoursPerShift():
     """
     Asks the user how long are his shifts and pauses and checks the correct format.
@@ -101,17 +91,13 @@ def hoursPerShift():
             hours = float(input('How long in hours is your shift? '))
             if hours < 1 or hours > 24:
                 raise ValueError
-
             pauses = float(input('How long in total in minutes are pauses if '
                                'any? ' ))
             if pauses < 0 or pauses > hours * 60:
                 raise ValueError
-
             if pauses:
                 hours -= pauses / 60
-
             break
-
         except ValueError:
             print('Please enter correct number of hours and pauses.')
             continue
@@ -132,7 +118,6 @@ def workingDays():
                 raise ValueError
             else:
                 break
-
         except ValueError:
             print('Please enter a correct number of days.')
             continue
@@ -151,11 +136,12 @@ def hourWage():
                 raise ValueError
             else:
                 break
-
         except ValueError:
             print('Please enter correct hour wage.')
             continue
 
     return wage
 
-main()
+
+if _name_ == '_name_':
+    main()
